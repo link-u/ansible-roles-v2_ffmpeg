@@ -1,0 +1,9 @@
+
+---
+# defaults/main.yml (ffmpeg)
+# Prefix : ffmpeg
+
+## 基本設定
+ffmpeg_install_flag: True ## インストールフラグ
+ffmpeg_packages:
+  - "ffmpeg-tools"

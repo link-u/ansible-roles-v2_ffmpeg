@@ -1,6 +1,10 @@
-
 ---
 # tasks/main.yml (ffmpeg)
+# Prefix : ffmpeg
+
+- name: Pre-check variables
+  import_tasks: pre_check.yml
+  tags: ["pre_check"]
 
 - name: Install tasks
   import_tasks: install.yml

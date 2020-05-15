@@ -1,0 +1,9 @@
+---
+# handlers/main.yml (ffmpeg)
+# Prefix : ffmpeg
+
+- name: "Print warning for ffmpeg (Check for deleted variables)"
+  debug:
+    msg: "{{ __ffmpeg_check_deleted_vars.stdout_lines }}"
+  failed_when: yes
+  ignore_errors: yes

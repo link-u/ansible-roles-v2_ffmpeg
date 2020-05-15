@@ -1,0 +1,67 @@
+---
+# tasks/pre_check.yml (ffmpeg)
+# Prefix : ffmpeg
+
+- name: Check for deleted variables
+  shell: >-
+    echo "[WARNING]: 以下の変数は削除されました. 以下の URL を確認してください. @y_hashida";
+    echo "    https://github.com/link-u/ansible-roles-v2_ffmpeg/blob/master/README.md#削除された変数の一覧";
+    {% if ffmpeg_force_install is defined %}
+      echo "ffmpeg_force_install";
+    {% endif %}
+
+    {% if ffmpeg_prefix is defined %}
+      echo "ffmpeg_prefix";
+    {% endif %}
+
+    {% if ffmpeg_src_dir is defined %}
+      echo "ffmpeg_src_dir";
+    {% endif %}
+
+    {% if ffmpeg_package is defined %}
+      echo "ffmpeg_package";
+    {% endif %}
+
+    {% if ffmpeg_dl_url is defined %}
+      echo "ffmpeg_dl_url";
+    {% endif %}
+
+    {% if ffmpeg_version is defined %}
+      echo "ffmpeg_version";
+    {% endif %}
+
+    {% if ffmpeg_libraries is defined %}
+      echo "ffmpeg_libraries";
+    {% endif %}
+
+    {% if ffmpeg_configure_options is defined %}
+      echo "ffmpeg_configure_options";
+    {% endif %}
+
+    {% if ffmpeg_install_dest is defined %}
+      echo "ffmpeg_install_dest";
+    {% endif %}
+
+    {% if nasm_prefix is defined %}
+      echo "nasm_prefix";
+    {% endif %}
+
+    {% if nasm_src_dir is defined %}
+      echo "nasm_src_dir";
+    {% endif %}
+
+    {% if nasm_install_dest is defined %}
+      echo "nasm_install_dest";
+    {% endif %}
+
+    {% if nasm_version is defined %}
+      echo "nasm_version";
+    {% endif %}
+
+    {% if nasm_package is defined %}
+      echo "nasm_package";
+    {% endif %}
+  register: __ffmpeg_check_deleted_vars
+  changed_when:
+    - (__ffmpeg_check_deleted_vars.stdout_lines | length) != 2
+  notify: "Print warning for ffmpeg (Check for deleted variables)"

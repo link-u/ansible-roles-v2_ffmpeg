@@ -62,6 +62,7 @@
       echo "nasm_package";
     {% endif %}
   register: __ffmpeg_check_deleted_vars
+  check_mode: no
   changed_when:
     - (__ffmpeg_check_deleted_vars.stdout_lines | length) != 2
   notify: "Print warning for ffmpeg (Check for deleted variables)"

@@ -11,6 +11,19 @@ ffmpeg をインストールする ansible role
 
 ## 使い方 (ansible)
 
+### Role variables
+
+```yaml
+## 基本設定
+ffmpeg_install_flag: True ## インストールフラグ
+ffmpeg_packages:
+  - "ffmpeg-tools"
+
+# ※ 特に group_vars で修正するような項目はない
+```
+
+### Example playbook
+
 ```yaml
 - hosts:
     - servers

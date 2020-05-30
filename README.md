@@ -32,9 +32,6 @@ ffmpeg_packages:
     - { role: ffmpeg, tags: ["ffmpeg"] }
 ```
 
-## 各種変数について
-Comming soon.
-
 ## 後方互換性について
 
 ### 削除された変数の一覧

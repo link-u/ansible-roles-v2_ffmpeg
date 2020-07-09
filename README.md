@@ -57,3 +57,6 @@ ffmpeg_packages:
 * `nasm_install_dest`
 * `nasm_version`
 * `nasm_package`
+
+## License
+MIT

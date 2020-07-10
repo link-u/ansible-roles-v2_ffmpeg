@@ -1,5 +1,7 @@
 # ffmpeg
 
+![Travis](https://travis-ci.org/link-u/ansible-roles-v2_ffmpeg.svg?branch=master)
+
 ## 概要
 ffmpeg をインストールする ansible role
 

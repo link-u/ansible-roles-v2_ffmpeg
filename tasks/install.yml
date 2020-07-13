@@ -1,7 +1,13 @@
-
 ---
 # tasks/install.yml (ffmpeg)
 # Prefix : ffmpeg
+
+- name: Pre-install packages
+  apt:
+    name:
+      - "gpg"
+    state: present
+    update_cache: yes
 
 - name: Trust our package maintainers.
   apt_key:

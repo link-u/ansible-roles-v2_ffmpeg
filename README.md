@@ -1,13 +1,14 @@
 # ffmpeg
 
+![Travis](https://travis-ci.org/link-u/ansible-roles-v2_ffmpeg.svg?branch=master)
+
 ## 概要
 ffmpeg をインストールする ansible role
 
 ## 動作確認バージョン
 
-- Ubuntu 18.04 (bionic)
-- ansible >= 2.8
-- Jinja2 2.10.3
+* Ubuntu: 18.04, 20.04
+* ansible: 2.8, 2.9
 
 ## 使い方 (ansible)
 
